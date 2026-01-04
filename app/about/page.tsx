@@ -131,7 +131,8 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-accent/30 text-primary rounded-lg text-sm font-medium">B.Sc.</span>
-                <span className="px-4 py-2 bg-accent/30 text-primary rounded-lg text-sm font-medium">M.Sc.</span>
+                <span className="px-4 py-2 bg-accent/30 text-primary rounded-lg text-sm font-medium">M.A.</span>
+                <span className="px-4 py-2 bg-accent/30 text-primary rounded-lg text-sm font-medium">N.T.T.</span>
                 <span className="px-4 py-2 bg-accent/30 text-primary rounded-lg text-sm font-medium">B.Ed.</span>
               </div>
 
@@ -158,7 +159,11 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary mt-1">•</span>
-                    Master of Science (M.Sc.)
+                    Master of Arts (M.A.)
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-secondary mt-1">•</span>
+                    Nursery Teacher Training (N.T.T.)
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-secondary mt-1">•</span>

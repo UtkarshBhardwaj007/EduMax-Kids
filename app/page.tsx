@@ -160,7 +160,10 @@ export default function Home() {
                   B.Sc.
                 </span>
                 <span className="px-4 py-1.5 bg-accent/30 text-primary rounded-full text-sm font-medium">
-                  M.Sc.
+                  M.A.
+                </span>
+                <span className="px-4 py-1.5 bg-accent/30 text-primary rounded-full text-sm font-medium">
+                  N.T.T.
                 </span>
                 <span className="px-4 py-1.5 bg-accent/30 text-primary rounded-full text-sm font-medium">
                   B.Ed.

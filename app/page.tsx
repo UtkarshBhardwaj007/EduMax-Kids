@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getImagePath } from '@/lib/utils'
 
 export default function Home() {
   return (
@@ -139,11 +140,9 @@ export default function Home() {
               <div className="relative max-w-sm mx-auto">
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary to-primary-light rounded-3xl opacity-10" />
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/principal.png"
+                  <img
+                    src={getImagePath('/images/principal.png')}
                     alt="Smt. Ratna - Principal & Founder"
-                    width={400}
-                    height={500}
                     className="w-full h-auto object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/90 to-transparent p-6">

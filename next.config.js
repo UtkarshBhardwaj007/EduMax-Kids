@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+const repoName = 'EduMax-Kids'
+
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/EduMax-Kids' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/EduMax-Kids/' : '',
+  basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}` : '',
   trailingSlash: true,
 }
 

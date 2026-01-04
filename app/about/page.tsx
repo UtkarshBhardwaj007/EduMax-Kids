@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { getImagePath } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'About Us - EduMax Kids | Premier Primary School',
@@ -111,11 +111,9 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-accent/50 to-primary/10 rounded-3xl" />
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/principal.png"
+                <img
+                  src={getImagePath('/images/principal.png')}
                   alt="Smt. Ratna - Principal & Founder of EduMax Kids"
-                  width={500}
-                  height={600}
                   className="w-full h-auto"
                 />
               </div>

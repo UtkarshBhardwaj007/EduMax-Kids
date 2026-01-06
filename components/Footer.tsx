@@ -45,7 +45,9 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61559674436464&mibextid=ZbWKwL"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-secondary transition-colors"
                 aria-label="Facebook"
               >
@@ -54,7 +56,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/edumaxkids?utm_source=qr&igsh=MTh1bDJqY3RsYnIyOQ=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-secondary transition-colors"
                 aria-label="Instagram"
               >
@@ -74,7 +78,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://youtube.com/@edumaxkids?si=atHhL5XMsMMhWiYp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-red-600 transition-colors"
                 aria-label="YouTube"
               >
@@ -128,7 +134,7 @@ export default function Footer() {
                   <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/>
                 </svg>
                 <span className="text-white/70">
-                  1156, Sector-55<br />Faridabad, Haryana, India
+                  Plot no. 806, Sec 55<br />Faridabad, Haryana, India
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">

@@ -150,7 +150,7 @@ git push origin main
 
 - **Phone**: +91 99588 64300
 - **Email**: edumaxkids2024@gmail.com
-- **Address**: 1156, Sector-55, Faridabad, Haryana, India
+- **Address**: Plot no. 806, Sec 55, Faridabad, Haryana, India
 - **WhatsApp**: [Chat Now](https://wa.me/919958864300)
 
 ## 👩‍🏫 Principal

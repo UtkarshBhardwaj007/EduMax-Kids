@@ -4,10 +4,10 @@ import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us - EduMax Kids | Get in Touch',
-  description: 'Contact EduMax Kids for admissions, queries, or to schedule a visit. Located in Sector-55, Faridabad, Haryana.',
+  description: 'Contact EduMax Kids for admissions, queries, or to schedule a visit. Located in Sec 55, Faridabad, Haryana.',
 }
 
-const address = '1156, Sector-55, Faridabad, Haryana, India'
+const address = 'Plot no. 806, Sec 55, Faridabad, Haryana, India'
 const encodedAddress = encodeURIComponent(address)
 
 export default function ContactPage() {
@@ -49,7 +49,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-serif text-lg text-primary mb-1">Visit Us</h4>
                   <p className="text-charcoal-light mb-3">
-                    1156, Sector-55<br />Faridabad, Haryana, India
+                    Plot no. 806, Sec 55<br />Faridabad, Haryana, India
                   </p>
                   <a
                     href={`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`}
@@ -152,7 +152,7 @@ export default function ContactPage() {
               <div className="bg-white p-4 rounded-2xl shadow-lg">
                 <div className="aspect-video rounded-xl overflow-hidden mb-4">
                   <iframe
-                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.5!2d77.3!3d28.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzAwLjAiTiA3N8KwMTgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1&q=${encodedAddress}`}
+                    src={`https://www.google.com/maps?q=${encodedAddress}&output=embed`}
                     width="100%"
                     height="100%"
                     style={{ border: 0, minHeight: '300px' }}

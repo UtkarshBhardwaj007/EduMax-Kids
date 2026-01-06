@@ -13,7 +13,7 @@ export default function Logo({ className = '', showTagline = true, variant = 'de
   return (
     <Link href="/" className={`flex items-center gap-3 group ${className}`}>
       {/* Logo Image */}
-      <div className="relative w-12 h-12 flex-shrink-0">
+      <div className={`relative w-12 h-12 flex-shrink-0 rounded-full ${isLight ? 'bg-white p-1 shadow-md' : ''}`}>
         <img
           src={getImagePath('/images/logo.png')}
           alt="EduMax Kids Logo"

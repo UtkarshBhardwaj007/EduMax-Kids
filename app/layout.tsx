@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   title: 'EduMax Kids - Premier Primary School | Admissions Open',
   description: 'EduMax Kids is a premier primary school in Faridabad offering quality education for Pre-Nursery, Nursery, and Kindergarten. No admission fees. Join us for a nurturing learning environment.',
   keywords: 'primary school, nursery, kindergarten, pre-nursery, Faridabad, education, EduMax Kids, no admission fees',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'EduMax Kids - Premier Primary School',
     description: 'Nurturing young minds for a brighter tomorrow. Admissions open for Pre-Nursery, Nursery, and K.G. classes.',

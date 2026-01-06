@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Logo from './Logo'
+import { getImagePath } from '@/lib/utils'
 
 const quickLinks = [
   { name: 'Home', href: '/' },
@@ -23,18 +23,18 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="relative w-10 h-10 flex items-center justify-center">
-                <div className="absolute inset-0 bg-white rounded-full border border-white/30" />
-                <span className="relative font-serif text-xl font-bold tracking-tight flex">
-                  <span className="text-[#2D4B9A]">E</span>
-                  <span className="text-[#E85C4A]">M</span>
-                </span>
+              <div className="relative w-11 h-11 flex-shrink-0">
+                <img
+                  src={getImagePath('/images/logo.png')}
+                  alt="EduMax Kids Logo"
+                  className="w-full h-full object-contain rounded-full"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg font-bold text-white leading-none">
                   EduMax Kids
                 </span>
-                <span className="text-[10px] text-white/60 tracking-widest uppercase">
+                <span className="text-[10px] text-white/60 tracking-[0.15em] uppercase mt-0.5">
                   Where Learning Begins
                 </span>
               </div>

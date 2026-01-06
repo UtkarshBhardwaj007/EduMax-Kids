@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { getImagePath } from '@/lib/utils'
 
@@ -55,21 +54,18 @@ export default function Home() {
 
             {/* Hero Image */}
             <div className="relative hidden lg:block">
-              <div className="relative w-full aspect-square max-w-lg mx-auto">
+              <div className="relative w-full max-w-xl mx-auto">
                 {/* Decorative Frame */}
-                <div className="absolute inset-4 bg-gradient-to-br from-primary to-primary-light rounded-3xl transform rotate-3" />
-                <div className="absolute inset-4 bg-gradient-to-br from-secondary to-secondary-light rounded-3xl transform -rotate-3 opacity-60" />
+                <div className="absolute inset-4 bg-gradient-to-br from-primary to-primary-light rounded-3xl transform rotate-2" />
+                <div className="absolute inset-4 bg-gradient-to-br from-secondary to-secondary-light rounded-3xl transform -rotate-2 opacity-60" />
                 
                 {/* Main Image Container */}
                 <div className="relative bg-white rounded-3xl p-4 shadow-2xl">
-                  <div className="aspect-square rounded-2xl overflow-hidden bg-accent/30">
-                    <Image
-                      src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=600&fit=crop"
-                      alt="Happy children learning"
-                      width={600}
-                      height={600}
-                      className="w-full h-full object-cover"
-                      priority
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-accent/30">
+                    <img
+                      src={getImagePath('/images/homepage.jpg')}
+                      alt="Children celebrating at EduMax Kids"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
@@ -191,8 +187,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Preview */}
-      <section className="section bg-cream">
+      {/* Gallery Preview - Auto-scrolling */}
+      <section className="section bg-cream overflow-hidden">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="section-title">Life at EduMax Kids</h2>
@@ -200,34 +196,58 @@ export default function Home() {
               Discover the vibrant learning experiences and joyful moments at our school
             </p>
           </div>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        {/* Auto-scrolling Gallery */}
+        <div className="relative">
+          {/* Gradient Overlays */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none" />
+          
+          {/* Scrolling Container */}
+          <div className="flex gap-4 animate-scroll hover:pause-animation">
             {[
-              { title: 'Morning Assembly', image: 'https://picsum.photos/seed/assembly/400/400' },
-              { title: 'Learning Activities', image: 'https://picsum.photos/seed/learning/400/400' },
-              { title: 'Dance Lessons', image: 'https://picsum.photos/seed/dance/400/400' },
-              { title: 'Art & Craft', image: 'https://picsum.photos/seed/art/400/400' },
-              { title: 'Festival Celebrations', image: 'https://picsum.photos/seed/festival/400/400' },
-              { title: 'Outdoor Play', image: 'https://picsum.photos/seed/play/400/400' },
-            ].map((item, index) => (
+              'IMG-20260106-WA0006.jpg',
+              'IMG-20260106-WA0007.jpg',
+              'IMG-20260106-WA0008.jpg',
+              'IMG-20260106-WA0009.jpg',
+              'IMG-20260106-WA0010.jpg',
+              'IMG-20260106-WA0011.jpg',
+              'IMG-20260106-WA0012.jpg',
+              'IMG-20260106-WA0013.jpg',
+              'IMG-20260106-WA0014.jpg',
+              'IMG-20260106-WA0015.jpg',
+              'IMG-20260106-WA0016.jpg',
+              'IMG-20260106-WA0017.jpg',
+              // Duplicate for seamless loop
+              'IMG-20260106-WA0006.jpg',
+              'IMG-20260106-WA0007.jpg',
+              'IMG-20260106-WA0008.jpg',
+              'IMG-20260106-WA0009.jpg',
+              'IMG-20260106-WA0010.jpg',
+              'IMG-20260106-WA0011.jpg',
+              'IMG-20260106-WA0012.jpg',
+              'IMG-20260106-WA0013.jpg',
+              'IMG-20260106-WA0014.jpg',
+              'IMG-20260106-WA0015.jpg',
+              'IMG-20260106-WA0016.jpg',
+              'IMG-20260106-WA0017.jpg',
+            ].map((img, index) => (
               <div
                 key={index}
-                className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                className="flex-shrink-0 w-64 md:w-80 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group"
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                <img
+                  src={getImagePath(`/images/gallery/${img}`)}
+                  alt={`School activity ${(index % 12) + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-white font-medium">{item.title}</p>
-                </div>
               </div>
             ))}
           </div>
+        </div>
 
+        <div className="container">
           <div className="text-center mt-10">
             <Link href="/gallery" className="btn btn-outline">
               View Full Gallery

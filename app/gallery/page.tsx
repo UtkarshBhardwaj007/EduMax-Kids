@@ -5,6 +5,10 @@ import { useState } from 'react'
 import { getImagePath } from '@/lib/utils'
 
 const galleryImages = [
+  '1000061505.jpg',
+  '1000061506.jpg',
+  '1000061507.jpg',
+  '1000061511.jpg',
   'IMG-20260106-WA0006.jpg',
   'IMG-20260106-WA0007.jpg',
   'IMG-20260106-WA0008.jpg',

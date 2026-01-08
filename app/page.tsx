@@ -207,6 +207,10 @@ export default function Home() {
           {/* Scrolling Container */}
           <div className="flex gap-4 animate-scroll hover:pause-animation">
             {[
+              '1000061505.jpg',
+              '1000061506.jpg',
+              '1000061507.jpg',
+              '1000061511.jpg',
               'IMG-20260106-WA0006.jpg',
               'IMG-20260106-WA0007.jpg',
               'IMG-20260106-WA0008.jpg',
@@ -220,6 +224,10 @@ export default function Home() {
               'IMG-20260106-WA0016.jpg',
               'IMG-20260106-WA0017.jpg',
               // Duplicate for seamless loop
+              '1000061505.jpg',
+              '1000061506.jpg',
+              '1000061507.jpg',
+              '1000061511.jpg',
               'IMG-20260106-WA0006.jpg',
               'IMG-20260106-WA0007.jpg',
               'IMG-20260106-WA0008.jpg',
@@ -239,7 +247,7 @@ export default function Home() {
               >
                 <img
                   src={getImagePath(`/images/gallery/${img}`)}
-                  alt={`School activity ${(index % 12) + 1}`}
+                  alt={`School activity ${(index % 16) + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
